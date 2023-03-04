@@ -1,22 +1,37 @@
-function helloWorld() {
-    return "Hello world";
-}
-function sendAlert() {
-    alert("Website is in development");
-}
-var User = /** @class */ (function () {
-    function User(name, surname, email, phoneNumber) {
+"use strict";
+exports.__esModule = true;
+var PromptSync = require("prompt-sync");
+var webUser = /** @class */ (function () {
+    function webUser(name, surname, email, phoneNumber) {
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.phoneNumber = phoneNumber;
     }
-    return User;
+    webUser.prototype.getUserFullName = function () {
+        return this.name + " " + this.surname;
+    };
+    webUser.prototype.getUserEmail = function () {
+        return this.email;
+    };
+    webUser.prototype.getUserPhoneNumber = function () {
+        return this.phoneNumber;
+    };
+    return webUser;
 }());
-function createUser(name, surname, email, phoneNumber) {
-    var newUser = new User(name, surname, email, phoneNumber);
+function createNewUser(name, surname, email, phoneNumber) {
+    var newUser = new webUser(name, surname, email, phoneNumber);
     return newUser;
 }
-console.log(helloWorld());
-var newPerson = createUser("Antanas", "Antauskis", "pastas@gmail.com", "+37051515515");
-console.log(newPerson.name);
+function writeUserData(user) {
+    console.log(user.getUserFullName());
+    console.log(user.getUserEmail());
+    console.log(user.getUserPhoneNumber());
+}
+var prompt = PromptSync();
+var userName = prompt("Enter name: ");
+var userSurname = prompt("Enter surname: ");
+var userEmail = prompt("Enter email: ");
+var userPhoneNumber = prompt("Enter phone number: ");
+var new_User = createNewUser(userName, userSurname, userEmail, userPhoneNumber);
+writeUserData(new_User);

@@ -1,30 +1,48 @@
-function helloWorld(): string{
-    return "Hello world";
-}
+import * as PromptSync from "prompt-sync";
 
-function sendAlert(): void{
-    alert("Website is in development");
-}
-
-class User{
-    name: string;
-    surname: string;
-    email: string;
-    phoneNumber: string;
+class webUser{
+    private name: string;
+    private surname: string;
+    private email: string;
+    private phoneNumber: string;
 
     public constructor(name: string, surname: string, email: string, phoneNumber: string){
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.phoneNumber = phoneNumber;
-    }   
+    }
+
+    public getUserFullName(): string{
+        return this.name + " " + this.surname;
+    }
+
+    public getUserEmail(): string{
+        return this.email;
+    }
+
+    public getUserPhoneNumber(): string{
+        return this.phoneNumber;
+    }
 }
 
-function createUser(name: string, surname: string, email: string, phoneNumber: string){
-    const newUser = new User(name, surname, email, phoneNumber);
+function createNewUser(name: string, surname: string, email: string, phoneNumber: string): webUser{
+    const newUser = new webUser(name, surname, email, phoneNumber);
     return newUser;
 }
 
-console.log(helloWorld());
-const newPerson = createUser("Antanas", "Antauskis", "pastas@gmail.com", "+37051515515");
-console.log(newPerson.name);
+function writeUserData(user: webUser){
+    console.log(user.getUserFullName());
+    console.log(user.getUserEmail());
+    console.log(user.getUserPhoneNumber());
+
+}
+
+const prompt = PromptSync();
+const userName = prompt("Enter name: ");
+const userSurname = prompt("Enter surname: ");
+const userEmail = prompt("Enter email: ");
+const userPhoneNumber = prompt("Enter phone number: ");
+
+const new_User: webUser = createNewUser(userName, userSurname, userEmail, userPhoneNumber);
+writeUserData(new_User);
