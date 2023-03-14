@@ -1,7 +1,7 @@
 import * as PromptSync from "prompt-sync";
 
 class webUser{
-    private name: string;
+    public name: string;
     private surname: string;
     private email: string;
     private phoneNumber: string;
