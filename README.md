@@ -5,4 +5,6 @@ Semestro projektas
     'install npm' to install packages
     'npm run dev' to open project
 
+
+                                                                                                        @M57D30
     
