@@ -6,5 +6,6 @@ Semestro projektas
     'npm run dev' to open project
 
 
-                                                                                                        @M57D30
+                              
+                              @M57D30
     
