@@ -1,6 +1,8 @@
 import "../styles/globals.css";
+import { useState } from "react";
 import type { AppType } from "next/app";
 import Footer from "Components/Footer/Footer";
+import SignInModal from "Components/Modals/SignInModal";
 import Navbar from "Components/Navbar/Navbar";
 import type { Session } from "next-auth";
 import { SessionProvider } from "next-auth/react";
@@ -11,14 +13,22 @@ const MyApp: AppType<{ session: Session | null }> = ({
   Component,
   pageProps: { session, ...pageProps },
 }) => {
+  const [showSignInModal, setSignInModal] = useState(false);
+
+  const handleModalVisibility = (isVisible: boolean) => {
+    setSignInModal(isVisible);
+  };
+
   return (
     <SessionProvider session={session}>
-      <Navbar />
+      <Navbar handleModalVisibility={handleModalVisibility} />
       <Component {...pageProps} />
+      <SignInModal
+        isVisible={showSignInModal}
+        onClose={() => setSignInModal(false)}
+      />
 
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </SessionProvider>
   );
 };
