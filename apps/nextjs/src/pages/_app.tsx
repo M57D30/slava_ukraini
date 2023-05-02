@@ -17,6 +17,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
 
   const handleModalVisibility = (isVisible: boolean) => {
     setSignInModal(isVisible);
+    document.body.style.overflow = "hidden";
   };
 
   return (
