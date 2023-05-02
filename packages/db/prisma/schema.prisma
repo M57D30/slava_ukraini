@@ -10,6 +10,14 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
+model skelbimai{
+    id Int @id
+    title String
+    description String
+    number String
+    email String
+}
+
 model Post {
     id      String @id @default(cuid())
     title   String
