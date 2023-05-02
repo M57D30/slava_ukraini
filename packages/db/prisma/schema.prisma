@@ -8,10 +8,11 @@ generator client {
 datasource db {
     provider = "mysql"
     url      = env("DATABASE_URL")
+    
 }
 
 model skelbimai{
-    id Int @id
+    id String @id @default(cuid())
     title String
     description String
     number String
