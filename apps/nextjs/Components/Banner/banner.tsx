@@ -1,31 +1,33 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
-function banner() {
+function Banner() {
   return (
-    <section className="relative mx-auto max-w-screen-lg py-24 px-4">
-      <div className="container relative z-20 mx-auto  text-yellow-500">
-        <h1 className="mb-4">Tailwind Banner with Object Fit Image</h1>
-        <p className="leading-normal ">
-          This is a banner that can be resized to your heart’s content without
-          using a background image property.
+    <section className="mx-full relative h-max w-full bg-gradient-to-b from-blue-500 to-blue-800 py-24 px-4">
+      <div className="container relative z-20 mx-auto rounded-lg bg-gray-800 bg-opacity-60 p-8 text-white shadow-lg">
+        <h1 className="mb-4 text-2xl font-bold md:text-5xl">
+          Padovanokite vilties šypsena: pagelbėkime Ukrainos vaikams kartu
+        </h1>
+
+        <p className="text-lg leading-normal md:text-xl">
+          Šiandien daugybė Ukrainos gyventojų kenčia nuo karinio konflikto, o
+          šalies ekonomika taip pat kenčia dėl krizės. Tu gali padėti! Tapk
+          humanitarine organizacija ir prisidėk prie gyventojų gerovės. Tavo
+          paaukotas daiktai, kaip rūbai, maistas, vaistai, ir kita reikalinga
+          medžiaga, padės tiems, kuriems reikia. Prisidėk dabar ir parodyk savo
+          gerą širdį!
         </p>
-        <p className="leading-normal">
-          Integer eu massa ipsum. Quisque dui purus, congue in urna sed,
-          volutpat condimentum nisi. Ut elementum tellus quam, sit amet congue
-          ante tempus id. Phasellus ultricies enim in est posuere, quis semper
-          urna consequat.
-        </p>
-        <a
-          href="#"
+        <Link
+          href="/NewItemForm"
           className="mt-4 inline-block rounded bg-blue-500 p-4 font-bold text-white no-underline hover:bg-blue-800"
         >
           Įdėk skelbimą!
-        </a>
+        </Link>
       </div>
       <div className="absolute inset-0 z-10 h-auto">
         <Image
-          src="/banner.png"
+          src="/banner12.jpg"
           alt=""
           className="object-fit-cover h-full w-full"
           layout="fill"
@@ -35,4 +37,4 @@ function banner() {
   );
 }
 
-export default banner;
+export default Banner;

@@ -1,10 +1,14 @@
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 function Logo() {
   return (
-    <div className="h-4 w-auto">
-      <img className="h-2 w-auto" src="/Logo.png" alt="Logo" />;
-    </div>
+    <Link href="/">
+      <div className="m-2 h-10 w-auto">
+        <Image src="/Logo.png" alt="Logo" height={100} width={200} />
+      </div>
+    </Link>
   );
 }
 

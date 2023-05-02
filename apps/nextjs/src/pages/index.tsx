@@ -6,6 +6,15 @@ const App: React.FC = () => {
   return (
     <>
       <Banner />
+      <div className="h-96 bg-red-300 text-5xl">
+        {" "}
+        Čia turetu but nauji "KATIK" ideti itemai
+      </div>
+      <div className="h-96 bg-blue-300"> Hehe</div>
+      <div className="h-96 bg-red-300"> Hehe</div>
+      <div className="h-96 bg-blue-300"> Hehe</div>
+      <div className="h-96 bg-red-300"> Hehe</div>
+      <div className="h-96 bg-blue-300"> Hehe</div>
       <div className="h-96 bg-red-300"> Hehe</div>
       <div className="h-96 bg-blue-300"> Hehe</div>
     </>
