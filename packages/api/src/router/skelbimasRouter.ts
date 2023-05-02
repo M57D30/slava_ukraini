@@ -3,6 +3,10 @@ import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "../trpc";
 
 export const skelbimasRouter = createTRPCRouter({
+  list: publicProcedure.query(({ ctx }) => {
+    return ctx.prisma.skelbimai.findMany();
+  }),
+
   create: publicProcedure
     .input(
       z.object({
