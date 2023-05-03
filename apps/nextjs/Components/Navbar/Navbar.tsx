@@ -13,6 +13,7 @@ const Navbar = ({ handleModalVisibility }: NavbarProps) => {
   return (
     <nav className="flex justify-between bg-blue-500 px-6 py-3">
       <Logo />
+
       <div className="flex items-center">
         <a href="#" className="mx-4 text-white">
           About Us

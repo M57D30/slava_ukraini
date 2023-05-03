@@ -13,10 +13,10 @@ function Banner() {
         <p className="text-lg leading-normal md:text-xl">
           Šiandien daugybė Ukrainos gyventojų kenčia nuo karinio konflikto, o
           šalies ekonomika taip pat kenčia dėl krizės. Tu gali padėti! Tapk
-          humanitarine organizacija ir prisidėk prie gyventojų gerovės. Tavo
-          paaukotas daiktai, kaip rūbai, maistas, vaistai, ir kita reikalinga
-          medžiaga, padės tiems, kuriems reikia. Prisidėk dabar ir parodyk savo
-          gerą širdį!
+          humanitarine organizacijos inciatyvos nariu ir prisidėk prie gyventojų
+          gerovės. Tavo paaukoti daiktai, kaip rūbai, maistas, vaistai, ir kita
+          reikalinga medžiaga, padės tiems, kuriems reikia. Prisidėk dabar ir
+          parodyk savo gerą širdį!
         </p>
         <Link
           href="/NewItemForm"

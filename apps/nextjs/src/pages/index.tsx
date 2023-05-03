@@ -1,15 +1,13 @@
 import React from "react";
 import Banner from "Components/Banner/banner";
+import ItemList from "Components/ItemList/ItemList";
 import { Document } from "postcss";
 
 const App: React.FC = () => {
   return (
     <>
       <Banner />
-      <div className="h-96 bg-red-300 text-5xl">
-        {" "}
-        Čia turetu but nauji "KATIK" ideti itemai
-      </div>
+      <ItemList />
       <div className="h-96 bg-blue-300"> Hehe</div>
       <div className="h-96 bg-red-300"> Hehe</div>
       <div className="h-96 bg-blue-300"> Hehe</div>
