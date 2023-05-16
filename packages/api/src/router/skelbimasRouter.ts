@@ -15,6 +15,8 @@ export const skelbimasRouter = createTRPCRouter({
         description: z.string(),
         number: z.string(),
         email: z.string(),
+        userId: z.string(),
+        pictureId: z.string(),
       }),
     )
     .mutation(async ({ input, ctx }) => {
