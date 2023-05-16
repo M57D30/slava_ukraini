@@ -25,4 +25,19 @@ export const skelbimasRouter = createTRPCRouter({
         data: input,
       });
     }),
+
+  remove: publicProcedure
+    .input(
+      z.object({
+        id: z.string(),
+      }),
+    )
+    .mutation(async ({ input, ctx }) => {
+      const { id } = input;
+      const del = await ctx.prisma.skelbimai.delete({
+        where: {
+          id,
+        },
+      });
+    }),
 });
