@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import Dropdown from "Components/LangDropDown";
 import Logo from "Components/Logo";
+import { useTranslation } from "react-i18next";
 
 interface NavbarProps {
   handleModalVisibility: (isVisible: boolean) => void;
@@ -10,19 +12,29 @@ const Navbar = ({ handleModalVisibility }: NavbarProps) => {
     handleModalVisibility(true);
   };
 
+  const { t, i18n } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const changeLanguage = (language: string) => {
+    i18n.changeLanguage(language);
+    setIsOpen(false);
+  };
+
   return (
     <nav className="flex justify-between bg-blue-500 px-6 py-3">
       <Logo />
-
       <div className="flex items-center">
         <a href="#" className="mx-4 text-white">
-          About Us
+          {t("Navbar.aboutUs")}
         </a>
         <a href="#" className="mx-4 text-white">
-          Sign Up
+          {t("Navbar.signUp")}
         </a>
         <a href="#" className="mx-4 text-white" onClick={handleSignInClick}>
-          Log In
+          {t("Navbar.logIn")}
+        </a>
+        <a>
+          <Dropdown />
         </a>
       </div>
     </nav>

@@ -6,8 +6,10 @@ import SignInModal from "Components/Modals/SignInModal";
 import Navbar from "Components/Navbar/Navbar";
 import type { Session } from "next-auth";
 import { SessionProvider } from "next-auth/react";
+import { I18nextProvider, useTranslation } from "react-i18next";
 
 import { api } from "~/utils/api";
+import i18n from "./i18n";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
@@ -21,16 +23,18 @@ const MyApp: AppType<{ session: Session | null }> = ({
   };
 
   return (
-    <SessionProvider session={session}>
-      <Navbar handleModalVisibility={handleModalVisibility} />
-      <Component {...pageProps} />
-      <SignInModal
-        isVisible={showSignInModal}
-        onClose={() => setSignInModal(false)}
-      />
+    <I18nextProvider i18n={i18n}>
+      <SessionProvider session={session}>
+        <Navbar handleModalVisibility={handleModalVisibility} />
+        <Component {...pageProps} />
+        <SignInModal
+          isVisible={showSignInModal}
+          onClose={() => setSignInModal(false)}
+        />
 
-      <Footer />
-    </SessionProvider>
+        <Footer />
+      </SessionProvider>
+    </I18nextProvider>
   );
 };
 

@@ -1,0 +1,38 @@
+{
+  "banner": {
+    "title": "Padovanokite vilties šypsena: pagelbėkime Ukrainos vaikams kartu!",
+    "text": "Šiandien daugybė Ukrainos gyventojų kenčia nuo karinio konflikto, o šalies ekonomika taip pat kenčia dėl krizės. Tu gali padėti! Tapk humanitarine organizacijos inciatyvos nariu ir prisidėk prie gyventojų gerovės. Tavo paaukoti daiktai, kaip rūbai, maistas, vaistai, ir kita reikalinga medžiaga, padės tiems, kuriems reikia. Prisidėk dabar ir parodyk savo gerą širdį!",
+    "button": "Įdėk skelbimą!"
+  },
+
+  "ItemList": {
+    "phone": "Telefonas:",
+    "email": "E. paštas:",
+    "contactSeller": "Susisiekti"
+  },
+
+  "SignInModal": {
+    "signInTitle": "Prisijunkite prie savo paskyros",
+    "email": "E. paštas",
+    "paswd": "Slaptažodis",
+    "rememberMe": "Likti prisijungus",
+    "forgotPaswd": "Pamiršai slaptažodį?",
+    "signUpGoogle": "Prisijunkite su Google",
+    "signIn": "Prisijunkite"
+  },
+
+  "Navbar": {
+    "aboutUs": "Apie mus",
+    "signUp": "Užširegistruokiti",
+    "logIn": "Prisijunkti prie paskyros"
+  },
+
+  "NewItemForm": {
+    "title": "Pavadinimas",
+    "description": "Apibūdinimas",
+    "phone": "Telefono numeris",
+    "email": "E. paštas",
+    "pic": "nuotrauka",
+    "upload": "Įkelti skelbimą"
+  }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 interface SignInModalProps {
   isVisible: boolean;
@@ -12,7 +13,7 @@ const SignInModal = ({ isVisible, onClose }: SignInModalProps) => {
     if ((e.target as HTMLDivElement).id === "wrapper") onClose();
     document.body.style.overflow = "visible";
   };
-
+  const { t } = useTranslation();
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25 backdrop-blur-sm"
@@ -23,7 +24,7 @@ const SignInModal = ({ isVisible, onClose }: SignInModalProps) => {
         <div className="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow-xl">
           <div className="px-4 py-5 sm:px-6">
             <h2 className="text-lg font-medium text-gray-900">
-              Sign in to your account
+              {t("SignInModal.signInTitle")}
             </h2>
           </div>
           <div className="px-4 py-5 sm:p-6">
@@ -33,7 +34,7 @@ const SignInModal = ({ isVisible, onClose }: SignInModalProps) => {
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Email address
+                  {t("SignInModal.email")}
                 </label>
                 <div className="mt-1">
                   <input
@@ -51,7 +52,7 @@ const SignInModal = ({ isVisible, onClose }: SignInModalProps) => {
                   htmlFor="password"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Password
+                  {t("SignInModal.paswd")}
                 </label>
                 <div className="mt-1">
                   <input
@@ -76,7 +77,7 @@ const SignInModal = ({ isVisible, onClose }: SignInModalProps) => {
                     htmlFor="remember_me"
                     className="ml-2 block text-sm text-gray-900"
                   >
-                    Remember me
+                    {t("SignInModal.rememberMe")}
                   </label>
                 </div>
                 <div className="text-sm">
@@ -84,7 +85,7 @@ const SignInModal = ({ isVisible, onClose }: SignInModalProps) => {
                     href="#"
                     className="font-medium text-blue-600 hover:text-blue-500"
                   >
-                    Forgot your password?
+                    {t("SignInModal.forgotPaswd")}
                   </a>
                 </div>
               </div>
@@ -108,7 +109,8 @@ const SignInModal = ({ isVisible, onClose }: SignInModalProps) => {
                       d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
                     ></path>
                   </svg>
-                  Sign up with Google<div></div>
+                  {t("SignInModal.signUpGoogle")}
+                  <div></div>
                 </button>
               </div>
               <div>
@@ -116,7 +118,7 @@ const SignInModal = ({ isVisible, onClose }: SignInModalProps) => {
                   type="submit"
                   className="flex w-full justify-center rounded-md border border-transparent bg-blue-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  Sign in
+                  {t("SignInModal.signIn")}
                 </button>
               </div>
             </form>

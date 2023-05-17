@@ -1,14 +1,16 @@
 import React from "react";
 import Banner from "Components/Banner/banner";
 import ItemList from "Components/ItemList/ItemList";
-import { Document } from "postcss";
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 
 const App: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Banner />
       <ItemList />
-      <div className="h-96 bg-blue-300"> Hehe</div>
+      <div className="h-96 bg-blue-300">{t("welcome.title")}</div>
       <div className="h-96 bg-red-300"> Hehe</div>
       <div className="h-96 bg-blue-300"> Hehe</div>
       <div className="h-96 bg-red-300"> Hehe</div>

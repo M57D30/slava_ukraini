@@ -1,8 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import dummyData from "../TestData/dummyData";
 
 function ItemList() {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-wrap">
       {dummyData.map((item) => (
@@ -17,10 +19,14 @@ function ItemList() {
             <div className="p-4">
               <h2 className="mb-2 font-bold">{item.title}</h2>
               <p className="mb-2 text-sm">{item.description}</p>
-              <p className="mb-2 text-gray-700">Phone: {item.phoneNumber}</p>
-              <p className="mb-2 text-gray-700">Email: {item.email}</p>
+              <p className="mb-2 text-gray-700">
+                {t("ItemList.phone")} {item.phoneNumber}
+              </p>
+              <p className="mb-2 text-gray-700">
+                {t("ItemList.email")} {item.email}
+              </p>
               <button className="rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
-                Contact seller
+                {t("ItemList.contactSeller")}
               </button>
             </div>
           </div>

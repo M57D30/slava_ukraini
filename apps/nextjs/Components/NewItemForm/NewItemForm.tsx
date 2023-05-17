@@ -1,15 +1,17 @@
 import React, { type FunctionComponent } from "react";
+import { useTranslation } from "react-i18next";
 
 interface NewItemFormProps {}
 
 const NewItemForm: FunctionComponent<NewItemFormProps> = () => {
+  const { t } = useTranslation();
   return (
     <div className="mx-auto mt-8 max-w-lg">
       <h1 className="mb-8 text-4xl font-bold">New Item Form</h1>
       <form className="space-y-6">
         <div>
           <label className="mb-2 block font-bold text-gray-700" htmlFor="title">
-            Title
+            {t("NewItemForm.title")}
           </label>
           <input
             className="focus:shadow-outline w-full appearance-none rounded-md border py-2 px-3 leading-tight text-gray-700 focus:outline-none"
@@ -24,7 +26,7 @@ const NewItemForm: FunctionComponent<NewItemFormProps> = () => {
             className="mb-2 block font-bold text-gray-700"
             htmlFor="description"
           >
-            Description
+            {t("NewItemForm.description")}
           </label>
           <textarea
             className="focus:shadow-outline w-full appearance-none rounded-md border py-2 px-3 leading-tight text-gray-700 focus:outline-none"
@@ -36,7 +38,7 @@ const NewItemForm: FunctionComponent<NewItemFormProps> = () => {
         </div>
         <div>
           <label className="mb-2 block font-bold text-gray-700" htmlFor="phone">
-            Phone Number
+            {t("NewItemForm.phone")}
           </label>
           <input
             className="focus:shadow-outline w-full appearance-none rounded-md border py-2 px-3 leading-tight text-gray-700 focus:outline-none"
@@ -48,7 +50,7 @@ const NewItemForm: FunctionComponent<NewItemFormProps> = () => {
         </div>
         <div>
           <label className="mb-2 block font-bold text-gray-700" htmlFor="email">
-            Email
+            {t("NewItemForm.email")}
           </label>
           <input
             className="focus:shadow-outline w-full appearance-none rounded-md border py-2 px-3 leading-tight text-gray-700 focus:outline-none"
@@ -60,7 +62,7 @@ const NewItemForm: FunctionComponent<NewItemFormProps> = () => {
         </div>
         <div>
           <label className="mb-2 block font-bold text-gray-700" htmlFor="image">
-            Picture
+            {t("NewItemForm.pic")}
           </label>
           <input
             className="focus:shadow-outline w-full appearance-none rounded-md border py-2 px-3 leading-tight text-gray-700 focus:outline-none"
@@ -71,7 +73,7 @@ const NewItemForm: FunctionComponent<NewItemFormProps> = () => {
         </div>
         <div>
           <button className="rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700">
-            Create Item
+            {t("NewItemForm.upload")}
           </button>
         </div>
       </form>

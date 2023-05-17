@@ -1,0 +1,35 @@
+{
+  "banner": {
+    "title": "Diffusons le sourire de l'espoir : aidons ensemble les enfants ukrainiens.",
+    "text": "Aujourd'hui, de nombreux habitants de l'Ukraine souffrent du conflit militaire, et l'économie du pays est également touchée par la crise. Vous pouvez aider ! Devenez membre d'une initiative d'une organisation humanitaire et contribuez au bien-être de la population. Vos dons tels que des vêtements, de la nourriture, des médicaments et d'autres matériaux nécessaires aideront ceux dans le besoin. Rejoignez-nous dès maintenant et montrez votre bon cœur !",
+    "button": "Publier une annonce"
+  },
+
+  "ItemList": {
+    "phone": "Phone:",
+    "email": "Email:",
+    "contactSeller": "Contact"
+  },
+  "SignInModal": {
+    "signInTitle": "Sign in to your account",
+    "email": "Email",
+    "paswd": "Password",
+    "rememberMe": "Remember me",
+    "forgotPaswd": "Forgot password?",
+    "signUpGoogle": "Sign in with Google",
+    "signIn": "Sign In"
+  },
+  "Navbar": {
+    "aboutUs": "About Us",
+    "signUp": "Sign Up",
+    "logIn": "Log In"
+  },
+  "NewItemForm": {
+    "title": "Title",
+    "description": "Description",
+    "phone": "Phone Number",
+    "email": "Email",
+    "pic": "Picture",
+    "upload": "Upload Listing"
+  }
+}
